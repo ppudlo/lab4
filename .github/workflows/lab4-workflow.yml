@@ -19,3 +19,8 @@ jobs:
 
       - name: Install the npm dependencies
         run: npm install
+
+      - name: Publish to the npm registry
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
